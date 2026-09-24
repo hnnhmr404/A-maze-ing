@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mazegen"
+version = "1.0.0"
+description = "A reusable maze generator for the 42 A-Maze-ing project"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE.md"}
+authors = [
+    {name = "Hannah Humaira"},
+    {name = "Tham Dexmund"}
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "flake8",
+    "mypy",
+    "build"
+]
+
+[tool.setuptools]
+packages = ["mazegen"]
+
+[tool.setuptools.package-data]
+mazegen = ["USAGE.md"]
